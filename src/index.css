@@ -16,6 +16,7 @@ code {
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #666666;
+  
 }
 
 a,
@@ -23,21 +24,16 @@ a:visited {
   color: #666666;
 }
 
+.codeWindow {
+   margin-left: -10px
+}
+
 .clear {
   clear: both;
 }
 
-td {
-  border-top: solid 1px #d3d3d3;
-}
-
-td,
-th {
-  padding: 10px;
-}
-
-table {
-  border-collapse: collapse;
+h3 {
+  margin-top: 2rem;
 }
 
 /* Documentation site component styles */
@@ -45,7 +41,19 @@ table {
   border: solid 1px #d3d3d3;
   padding: 16px;
   margin-bottom: 16px;
-  background-color: #f4f6f9;
+  background-color: #f2f2f2;
+  
+}
+
+.dispContainer {
+  padding: 10px;
+  margin-left: -10px;
+  background-color: #fafafa;
+}
+
+.toggleCode {
+  font-size: 0.75em;
+  margin-top: 1.5em;
 }
 
 .example h4:first-of-type {
@@ -66,13 +74,21 @@ td {
   padding: 5px;
 }
 
+
+.pageTitle {
+  margin-bottom: 2rem;
+}
+
+.container {
+
+  margin: 1rem;
+  max-width: 1700px;
+}
+
 .navigation {
-  float: left;
-  width: 250px;
+ 
+  
   list-style-type: none;
   padding: 0;
 }
 
-.componentpage {
-  margin-left: 275px;
-}

@@ -7,7 +7,7 @@ function HelloWorld({ message }) {
 }
 
 HelloWorld.propTypes = {
-  /** message to display here */
+  /** message to display */
   message: PropTypes.string.isRequired
 };
 

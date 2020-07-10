@@ -1,43 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 import PropTypes from "prop-types";
 import CodeExample from "./CodeExample";
 
-class Example extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { showCode: false };
-  }
+const Example = (props) => {
+  const [showCode, setShowCode] = useState(false);
+  const { code, description, name } = props.example;
 
-  toggleCode = event => {
+  const toggleCode = event => {
     event.preventDefault();
-    this.setState(prevState => {
-      return { showCode: !prevState.showCode };
-    });
+    setShowCode(!showCode);
   };
 
-  render() {
-    const { showCode } = this.state;
-    const { code, description, name } = this.props.example;
-    // Must use CommonJS require to dynamically require because ES Modules must be statically analyzable.
-    const ExampleComponent = require(`./examples/${this.props.componentName}/${name}`)
-      .default;
-    return (
-      <div className="example">
-        {description && <h4>{description}</h4>}
+  const ExampleComponent = require(`./examples/${props.componentName}/${name}`).default;
 
-        <ExampleComponent />
-
-        <p>
-          {/* eslint-disable-next-line  */}
-          <a href="#" onClick={this.toggleCode}>
-            {showCode ? "Hide" : "Show"} Code
-          </a>
-        </p>
-
-        {showCode && <CodeExample>{code}</CodeExample>}
+  return (
+    <div className="example">
+      {description && <h4>{description}</h4>}
+      <div className="dispContainer">
+      <ExampleComponent />
       </div>
-    );
-  }
+      <p className="toggleCode" >
+        {/* eslint-disable-next-line  */}
+        <a href="#" onClick={toggleCode} >
+          {showCode ? "Hide" : "Show"} Code
+        </a>
+      </p>
+
+      {showCode && <CodeExample>{code}</CodeExample>}
+    </div>
+  );
 }
 
 Example.propTypes = {

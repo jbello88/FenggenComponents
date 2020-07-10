@@ -1,7 +1,7 @@
 import React from "react";
 import HelloWorld from "ps-react/HelloWorld";
 
-/** Custom a message */
+/** Display a Custom message */
 export default function ExampleHelloWorld() {
-  return <HelloWorld message="Pluralsight viewers!" />;
+  return <HelloWorld message="Welcome to my morning!" />;
 }

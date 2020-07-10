@@ -14,7 +14,7 @@ class CodeExample extends React.Component {
 
   render() {
     return (
-      <pre
+      <pre className="codeWindow"
         ref={ref => {
           this.element = ref;
         }}
