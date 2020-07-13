@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import Navigation from "./Navigation";
 import ComponentPage from "./ComponentPage";
 import componentData from "../../config/componentData";
+import {Container, Row, Col } from "react-bootstrap";
 
 const Docs = () => {
 
@@ -19,20 +20,22 @@ const Docs = () => {
 
 
     return (
-      <div className="container">
-        <div className="row">
-          <h1 className="col pageTitle">Fenggen React-Components</h1>
-          </div>
-        <div className="row" >
-          <div className="col-2 navi" >
+      <Container>
+        <Row>
+          <Col>
+            <h1 className="pageTitle">Fenggen React-Components</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="navi" >
              <Navigation components={componentData.map(component => component.name)} />
-          </div>
-          <div className="col-10 bb">
+          </Col>
+          <Col xs={10} className="bb">
             <ComponentPage component={component}  />
-          </div>
+          </Col>
        
-        </div>
-      </div>
+        </Row>
+      </Container>
     );
 
 }

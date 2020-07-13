@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\config",
+    "\\public",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\EyeIcon",
+    "\\src\\components\\Label",
+    "\\src\\docs",
+    "\\src\\docs\\examples",
+    "\\src\\utils"
+  ],
+  "SelectedNode": "\\src\\components\\Label\\Label.jsx",
+  "PreviewInSolutionExplorer": false
+}
