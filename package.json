@@ -24,7 +24,7 @@
   "dependencies": {
     "bootstrap": "^4.5.0",
     "formik": "^2.1.4",
-    "highlight.js": "9.15.10",
+    "highlight.js": "10.1.2",
     "prop-types": "15.7.2",
     "react": "^16.11.0",
     "react-bootstrap": "^1.2.2",
